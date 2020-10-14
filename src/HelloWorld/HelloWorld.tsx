@@ -8,7 +8,7 @@ const HelloWorld: React.FC = () => {
     useEffect(() => {
         // @ts-ignore
         setWord(rword.generate(1))
-    })
+    }, [])
     return (
         <div
             className='helloWorld'
