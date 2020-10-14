@@ -6,9 +6,12 @@ const HelloWorld: React.FC = () => {
     const [word, setWord] = useState<string>('');
 
     useEffect(() => {
-        // @ts-ignore
-        setWord(rword.generate(1))
+        console.log('useEffect')
+        const word: string = rword.generate(1) as string
+        console.log('word > ', word)
+        setWord(word)
     }, [])
+
     return (
         <div
             className='helloWorld'
